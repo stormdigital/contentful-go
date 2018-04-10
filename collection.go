@@ -17,12 +17,24 @@ type Collection struct {
 	c        *Contentful
 	req      *http.Request
 	page     uint16
-	Sys      *Sys          `json:"sys"`
-	Total    int           `json:"total"`
-	Skip     int           `json:"skip"`
-	Limit    int           `json:"limit"`
-	Items    []interface{} `json:"items"`
-	Includes interface{}   `json:"includes"`
+	Sys      *Sys          				`json:"sys"`
+	Total    int           				`json:"total"`
+	Skip     int           				`json:"skip"`
+	Limit    int           				`json:"limit"`
+	Items    []interface{} 				`json:"items"`
+	Includes interface{}   				`json:"includes"`
+	Errors 	 *[]CollectionError			`json:"errors"`
+}
+
+type CollectionError struct {
+	Sys      *Sys          				`json:"sys"`
+	Details  *CollectionErrorDetails	`json:"details"`
+}
+
+type CollectionErrorDetails struct {
+	ID          string       			`json:"id"`
+	Type        string      			`json:"type"`
+	LinkType    string      			`json:"linkType"`
 }
 
 // NewCollection initilazies a new collection
