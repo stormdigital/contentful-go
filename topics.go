@@ -1,5 +1,6 @@
 package contentful
 
+// Topic constants
 const (
 	TopicContentTypeCreate    = "ContentManagement.ContentType.create"
 	TopicContentTypeSave      = "ContentManagement.ContentType.save"

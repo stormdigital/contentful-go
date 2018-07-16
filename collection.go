@@ -26,11 +26,13 @@ type Collection struct {
 	Errors 	 *[]CollectionError			`json:"errors"`
 }
 
+// Collection error
 type CollectionError struct {
 	Sys      *Sys          				`json:"sys"`
 	Details  *CollectionErrorDetails	`json:"details"`
 }
 
+// Collection error details
 type CollectionErrorDetails struct {
 	ID          string       			`json:"id"`
 	Type        string      			`json:"type"`
