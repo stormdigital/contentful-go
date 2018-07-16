@@ -11,7 +11,7 @@ type CollectionOptions struct {
 	Limit uint16
 }
 
-// Collection
+// Collection holds collection data
 type Collection struct {
 	Query
 	c        *Contentful
@@ -26,13 +26,13 @@ type Collection struct {
 	Errors 	 *[]CollectionError			`json:"errors"`
 }
 
-// CollectionError
+// CollectionError holds collection errors
 type CollectionError struct {
 	Sys      *Sys          				`json:"sys"`
 	Details  *CollectionErrorDetails	`json:"details"`
 }
 
-// CollectionErrorDetails
+// CollectionErrorDetails hold collection error details
 type CollectionErrorDetails struct {
 	ID          string       			`json:"id"`
 	Type        string      			`json:"type"`
